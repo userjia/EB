@@ -32,10 +32,30 @@ public class RandomUtil{
 		return (char)random;
 	}
 	
+	public static String BubbleSort(String seralize){
+		char[] tempChar=seralize.toCharArray();
+		int lenth=tempChar.length-1;
+		char c;
+		boolean b;
+		do{
+		b=false;
+		for(int i=0;i<lenth;i++){
+			if(tempChar[i]>tempChar[i+1]){
+				b=true;
+				c=tempChar[i];
+				tempChar[i]=tempChar[i+1];
+				tempChar[i+1]=c;
+			}
+		}
+		lenth--;
+		}while(lenth>1||b==true);
+		return new String(tempChar);
+	}
+	
 	public static void main(String[] args){
 		int lenth = 100;
 		String str = getRandomString((int)(Math.random()*lenth)+1);
-		System.out.println(str);
+		System.out.println(BubbleSort(str));
 	}
 	
 }
