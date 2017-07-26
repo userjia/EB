@@ -53,26 +53,31 @@ public class RandomUtil{
 	}
 	
 	public static void QuickSort(char[] cArray, int start, int end){
-		int standNum=start;
-		int i;
-		for ( i=start+1;i<end;i++)//choose the first element 0 to be stand
-		{
-			char c;
-			if(cArray[i]<cArray[standNum]&&standNum<i){//error, the bigger didn't move to the stand right
-				c=cArray[i];
-				cArray[i]=cArray[standNum];
-				cArray[standNum]=c;
-				standNum=i;
+		//int standNum=start;
+		char stand=cArray[start];
+		int i=start, j=end;
+		while(i<j){
+			while(cArray[j]>=stand&&i<j){
+				j--;
 			}
-		}
-		if(standNum>start+1){//attention the bundary is start and end;
-			QuickSort(cArray, start, standNum);
-		}
-		if(standNum<end-2){
-			QuickSort(cArray, standNum+1, end);
-		}
+			cArray[i]=cArray[j];
 		
+			while(cArray[i]<=stand&&i<j){
+				i++;
+			}
+			cArray[j]=cArray[i];
+
+		}
+		cArray[i]=stand;
+
+		if(j>start){//attention the bundary is start, end is lenth-1;
+			QuickSort(cArray, start, i-1);
+		}
+		if(i<end){
+			QuickSort(cArray, i+1, end);
+		}
 	}
+	
 	
 	public static void main(String[] args){
 		int lenth = 100;
@@ -81,7 +86,7 @@ public class RandomUtil{
 		int end=cArray.length;
 		System.out.println(str);
 		System.out.println(BubbleSort(str));
-		QuickSort(cArray,0,end);
+		QuickSort(cArray,0,end-1);
 		System.out.println(new String(cArray));
 	}
 	
