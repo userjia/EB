@@ -52,10 +52,36 @@ public class RandomUtil{
 		return new String(tempChar);
 	}
 	
+	public static void QuickSort(char[] cArray, int start, int end){
+		int standNum=start;
+		int i;
+		for ( i=start+1;i<end;i++)//choose the first element 0 to be stand
+		{
+			char c;
+			if(cArray[i]<cArray[standNum]&&standNum<i){
+				c=cArray[i];
+				cArray[i]=cArray[standNum];
+				cArray[standNum]=c;
+				standNum=i;
+			}
+		}
+		if(standNum>1){
+			QuickSort(cArray, 0, standNum);
+		}
+		if(standNum<end-2){
+			QuickSort(cArray, standNum+1, end);
+		}
+		
+	}
+	
 	public static void main(String[] args){
 		int lenth = 100;
 		String str = getRandomString((int)(Math.random()*lenth)+1);
-		System.out.println(BubbleSort(str));
+		char[] cArray=str.toCharArray();
+		int end=cArray.length;
+		System.out.println(BubbleSort(str))
+		QuickSort(cArray,0,end);
+		System.out.println(new String(cArray));
 	}
 	
 }
