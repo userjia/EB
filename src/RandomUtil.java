@@ -58,15 +58,15 @@ public class RandomUtil{
 		for ( i=start+1;i<end;i++)//choose the first element 0 to be stand
 		{
 			char c;
-			if(cArray[i]<cArray[standNum]&&standNum<i){
+			if(cArray[i]<cArray[standNum]&&standNum<i){//error, the bigger didn't move to the stand right
 				c=cArray[i];
 				cArray[i]=cArray[standNum];
 				cArray[standNum]=c;
 				standNum=i;
 			}
 		}
-		if(standNum>1){
-			QuickSort(cArray, 0, standNum);
+		if(standNum>start+1){//attention the bundary is start and end;
+			QuickSort(cArray, start, standNum);
 		}
 		if(standNum<end-2){
 			QuickSort(cArray, standNum+1, end);
@@ -79,7 +79,8 @@ public class RandomUtil{
 		String str = getRandomString((int)(Math.random()*lenth)+1);
 		char[] cArray=str.toCharArray();
 		int end=cArray.length;
-		System.out.println(BubbleSort(str))
+		System.out.println(str);
+		System.out.println(BubbleSort(str));
 		QuickSort(cArray,0,end);
 		System.out.println(new String(cArray));
 	}
