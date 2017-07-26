@@ -1,5 +1,8 @@
-
 ERROR:java non-static variable this cannot be referenced from a static context 
 解决：main 是静态的，它直接引用的方法也应该是静态的
 
 java 数组length是属性，不是方法，后面没有括号
+
+java 控制台运行
+javac Test.java 编译
+java Test.class 运行
