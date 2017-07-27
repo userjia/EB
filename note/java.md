@@ -23,3 +23,11 @@ Hibernate数据库移植性很好，MyBatis的数据库移植性不好，不同�
 Hibernate有更好的二级缓存机制，可以使用第三方缓存。MyBatis本身提供的缓存机制不佳。
 链接：https://www.zhihu.com/question/21104468/answer/58579295
 
+java获取程序执行时间 
+long startTime=System.nanoTime(); //纳秒
+long startTime=System.currentTimeMillis(); //毫秒  //获取开始时间
+doSomeThing();  //测试的代码段
+long endTime=System.currentTimeMillis(); //获取结束时间
+
+
+
