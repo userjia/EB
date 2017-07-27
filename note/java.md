@@ -29,5 +29,6 @@ long startTime=System.currentTimeMillis(); //毫秒  //获取开始时间
 doSomeThing();  //测试的代码段
 long endTime=System.currentTimeMillis(); //获取结束时间
 
+var url = $('.menu_item:contains('+ title + ')').attr('name');//选择包括title的。。。
 
 
