@@ -1,5 +1,4 @@
-*
-[Tomcat自带log的配置 ](http://huangrongyou.iteye.com/blog/1577508)(可使用于没有eclipse的控制台界面)
+* [Tomcat自带log的配置 ](http://huangrongyou.iteye.com/blog/1577508)(可使用于没有eclipse的控制台界面)
  
  markdown 添加链接 \[text](http://)
  
