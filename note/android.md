@@ -1,5 +1,5 @@
 ### layout
-android:visibility="invisible" / setVisibility(View.INVISIBLE);    
+android:visibility="invisible" / setVisibility(View.INVISIBLE);/visible,invisible,gone
 android:clickable="false" / button.setCheckable(false);
 
 dp: always the same size whatever the screen pixels are
