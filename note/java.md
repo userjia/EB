@@ -34,8 +34,8 @@ long endTime=System.currentTimeMillis(); //获取结束时间`
       
 ?静态，动态绑定的转型
 
-#### 泛型
-泛型三种：
+#### 泛型    
+泛型三种：     
           [1]ArrayList<T> al=new ArrayList<T>();指定集合元素只能是T类型   
           [2]ArrayList<?> al=new ArrayList<?>();集合元素可以是任意类型，这种没有意义，一般是方法中，只是为了说明用法    
           [3]ArrayList<? extends E> al=new ArrayList<? extends E>();   
