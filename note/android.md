@@ -1,3 +1,6 @@
+
+
+
 ### layout
 android:visibility="invisible" / setVisibility(View.INVISIBLE);/visible,invisible,gone
 android:clickable="false" / button.setCheckable(false);
@@ -40,7 +43,6 @@ savedInstanceState, 生命周期中保存状态的变量？
 what is the relationship between fragment's lifecycle and activity's?   
 : align with it
 
-
-
-
+### eclipse dx.jar 的问题
+不知道是环境变量还是什么，把26.0.1的dx.jar 替换成25的就好了
 
