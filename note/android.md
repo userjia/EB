@@ -43,6 +43,21 @@ savedInstanceState, 生命周期中保存状态的变量？
 what is the relationship between fragment's lifecycle and activity's?   
 : align with it
 
-### eclipse dx.jar 的问题
+### eclipse  的问题
+#### Dx.jar
 不知道是环境变量还是什么，把26.0.1的dx.jar 替换成25的就好了
 
+#### support包的引用
+使用support v7 appcompat 需要导入其项目
+引用support包时在preference->Android 下选择sdk后下方的lib中引用
+
+#### 有时出现.xml中的东西找不到的问题
+更改jdk版本可能解决问题
+https://stackoverflow.com/questions/26656567/appcompat-v7-error-in-eclipse
+http://www.eoeandroid.com/thread-559360-1-1.html?_dsign=32941d87
+http://www.cnblogs.com/expiator/p/5914418.html
+
+####
+support 下载地址
+https://dl.google.com/android/repository/support_r19.zip
+现在的sdk下载的support不直接支持eclipse 导入，所以可以通过以上链接单独下载，但是这个功能以后可能也就不支持了
